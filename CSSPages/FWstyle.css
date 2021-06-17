@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+.flexheading {
+
+}
+
+h1 {
+  margin-bottom: 200px;
+  text-align: center;
+  font-family: "Lucida Handwriting" cursive;
+  font: bold 1.8em black;
+  }
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.flex-item-left {
+  background-color: ivory;
+    border: 3px solid black;
+    margin:2px;
+    padding: 10px;
+    flex: 65%;
+}
+
+.flex-item-left h2 {
+  text-align: center;
+  font-family: "Lucida Handwriting" cursive;
+  font: bold 1.8em black;
+  margin-right: 30px;
+  }
+
+
+.flex-item-left p {
+
+  text-align: justify;
+  font-family: "Lucida Handwriting" cursive;
+  font: 1.4em black;
+  }
+
+  .flex-item-left img {
+  
+    float:left; 
+    width: 200px;
+    margin: 0 15px 5px 5px;
+    border: solid 2px black;
+    border-radius: 15px;
+  }
+  
+
+.flex-item-right {
+  background-color: rgb(236, 236, 106);
+  margin: 3px;
+  padding: 10px;
+  flex: 30%;
+  max-width: 30%;
+}
+
+.flex-item-right img {
+  border: solid 3px black;
+  vertical-align: middle;
+}
+
+.flex-item-bottom {
+  background-color: rgb(236, 236, 106);
+  margin: 3px;
+  padding: 10px;
+  flex: 19%;
+  max-width: 19%;
+}
+
+.flex-item-bottom img {
+  border: solid 3px black;
+  vertical-align: middle;
+}
+
+.flex-item-3 {
+  background-color: rgb(236, 236, 106);
+  margin: 3px;
+  padding: 10px;
+  flex: 32%;
+  max-width: 32%;
+}
+
+.flex-item-3 img {
+  border: solid 3px black;
+  vertical-align: middle;
+}
+
+.flex-item-4 {
+  background-color: rgb(236, 236, 106);
+  margin: 3px;
+  padding: 5px;
+  flex: 24%;
+  max-width: 24%;
+}
+
+.flex-item-4 img {
+  border: solid 3px black;
+  vertical-align: middle;
+}
+
+
+.flex-item-pano {
+  background-color: rgb(236, 236, 106);
+  margin: 3px;
+  padding: 10px;
+  flex: 95%;
+  max-width: 95%;
+}
+.flex-item-pano img {
+  border: solid 3px black;
+  vertical-align: middle;
+}
+
+
+/*
+.flex-item-right p {
+  background: ivory;
+  font-family: "Lucida Handwriting" cursive;
+  font: 1.4 em black;
+}
+*/
+
+div.desc {
+    margin: 5px 5px 5px 5px;
+    font-family: "Brushstroke TM" cursive;
+    font: bold 20px black;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+  }
+
+img:hover {
+  border: solid 4px black;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 750px) {
+  .flex-item-right, .flex-item-left, .flex-item-bottom, .flex-item-4, .flex-item-3 {
+    flex: 80%;
+    max-width: 80%;
+  }
+}

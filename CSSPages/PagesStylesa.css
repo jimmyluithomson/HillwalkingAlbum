@@ -1,0 +1,110 @@
+
+.page {
+    display: flex;
+    flex: wrap;
+  }
+  
+  .column {
+    float: left;
+    display: inline;
+    width: 35%;
+    margin: 0px 0px 0px 25px;
+  }
+  
+  .picture {
+  width: 100%;
+  height: auto;  
+  }
+  
+  div.picture img {
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 5px 5px 5px 0px;
+  }
+  
+  .desc {
+  padding: 15px;
+  text-align: center;
+  background-color: ivory;
+  font: "BrushStroke TM" cursive;
+  }
+  
+  .textbox {
+    float: left;
+    display: inline-block;
+    width: 55%;
+    height: auto;
+    background-color: ivory;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 5px 5px 5px 25px;
+  }
+  
+  h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+  }
+  
+  .textbox p {
+  text-indent: 10px;
+  text-align: justify;
+  font-family: "Lucida Handwriting" cursive;
+  font: 1.8em black;
+  }
+  
+  a {
+  text-decoration: none;
+  color: #008CBA;
+  }
+  
+/* to style a panorama image with description.
+For inclusion at the bottom of the page*/
+
+div.pano {
+  width: 100%;
+  height: auto;
+  }
+  
+div.pano img {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  }
+  
+div.pandesc {
+  padding: 15px;
+  text-align: center;
+  background-color: ivory;
+  font: bold 20px red;
+  font-family: "BrushStroke TM" cursive;
+  }
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .textbox {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .textbox {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+}

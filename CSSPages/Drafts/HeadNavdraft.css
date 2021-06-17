@@ -1,0 +1,117 @@
+/* Styling of the topbar to sit above the horizontal Navbar. These settings, max-width 100% and height auto
+ allow responsiveness of the image as it moves to a smaller screensize*/
+
+ .fixedtopbox {
+  position: fixed;
+  width:99%;
+  top: 0;
+  margin: 0 auto;
+}
+
+
+.topbar {
+  background: url(Background/Header.jpg) no-repeat center;
+  background-size: cover;
+  height: auto;
+  padding: 20px;
+  border: solid 3px black;
+}
+
+.topbar h1 {
+  text-align: left;
+  font: bold 20px;
+  color: black ;
+}
+
+/* Styling the Navigation bar */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: slateblue;
+}
+
+li {float: left;}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Place code for inserting dropdown menus into the Navbar*/
+
+
+
+li .dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* adding the hover colors for the Nav links and the Dropdown */
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: cornflowerblue;
+
+}
+
+.dropdown-content a:hover {background-color: grey;
+color: white;}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+/* Code to add a green background to the active link
+
+*/
+
+li a.active {background-color: #4CAF50;
+}
+
+
+/* to float a link About to the far right of the Navbar. I took this out and added 
+a style=float-right to the About link: .
+
+I do not know why this did not work ? perhaps i just need to call it .right ?
+so it does work now and i need this class so that I can add it to the media query
+and center the text for smaller screens.
+*/
+.right {float: right;}
+
+  
+  
+@media only screen and (max-width: 750px) {
+li, .right {
+    float: none;
+    text-align: center;}
+
+.dropdown-content {
+  margin-left: 60%;
+  display:none;
+  width: 30%;
+}
+.dropdown-content a {
+  text-align: left;
+}

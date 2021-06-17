@@ -1,0 +1,238 @@
+body {margin: 0;
+      background-color: rgb(236, 236, 106)
+}
+
+/* Styling of the topbar to sit above the horizontal Navbar. These settings, max-width 100% and height auto
+ allow responsiveness of the image as it moves to a smaller screensize*/
+.topbar {
+  background: url(Adventures/Home/Header.jpg) no-repeat center;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  border: solid 3px black;
+  max-width: 100%;
+}
+
+.topbar h1 {
+  text-align: left;
+  font: bold 20px;
+  color: black ;
+}
+
+/* Styling of the footer. Again these settings, max-width 100% and height auto should
+ allow responsiveness of the image as it moves to a smaller screensize, The image was much taller than the header but adding 
+ margins into the h3 style allowed it to sit alot better and show the fuller image off. Care styling the left margin for smaller screen sizes*/
+
+.footer {
+  background: url(Adventures/Home/Footer2.jpg) no-repeat bottom;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  border: solid 3px black;
+  max-width: 100%;
+}
+
+
+h2 {
+  text-align:center;
+}
+
+h3 {
+  color: Black;
+  font: bold 20px;
+  margin: 200px 0px 10px 0px;
+}
+
+ul {
+  list-style-type: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: slateblue;
+}
+
+li {float: left;}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Place code for inserting dropdown menus into the Navbar*/
+
+
+
+li .dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* adding the hover colors for the Nav links and the Dropdown */
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: cornflowerblue;
+
+}
+
+.dropdown-content a:hover {background-color: grey;
+color: white;}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+/* Code to add a green background to the active link
+
+*/
+
+li a.active {background-color: #4CAF50;
+}
+
+/*Styling for the  image gallery on this home page*/
+
+div.gallery {
+    border: 2px solid slateblue;
+    margin: 5px;
+
+  }
+  
+  div.gallery:hover {
+    border: 4px solid black;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    font-family: "Brushstroke TM" cursive;
+    font: bold 20px black;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+/*End of Styling for the image gallery on this home page*/
+
+
+/*Styling for the  pages gallery on the midwest link page*/
+.page {
+  display: flex;
+  flex: wrap;
+}
+
+.column {
+  flex: 35%;
+  max-width: 35%;
+}
+
+.picture {
+border: 3px solid black;
+margin: 0px 0px 3px 0px;
+}
+
+.picture img {
+  padding: 20px;
+  margin: 5px 5px 5px 0px;
+}
+
+.desc {
+padding: 15px;
+text-align: center;
+background-color: ivory;
+font: "BrushStroke TM" cursive;
+}
+
+.textbox {
+  flex: 65%;
+  background-color: ivory;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+/*End of Styling for the image gallery on this midwest page*/
+
+/* to float a link About to the far right of the Navbar. I took this out and added 
+a style=float-right to the About link: .
+
+I do not know why this did not work ? perhaps i just need to call it .right ?
+so it does work now and i need this class so that I can add it to the media query
+and center the text for smaller screens.
+*/
+.right {float: right;}
+
+
+/* Responsive Media Query to make each link 100%
+class .responsive restyles the photogallery */
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  
+@media only screen and (max-width: 750px) {
+li, .right {
+    float: none;
+    text-align: center;}
+
+.dropdown-content {
+  margin-left: 60%;
+  display:none;
+  width: 30%;
+}
+.dropdown-content a {
+  text-align: left;
+}
+.responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+.textbox, .column {
+    flex: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }  
+
+/* Clears Floats to restart next row */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  

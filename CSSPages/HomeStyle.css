@@ -1,0 +1,97 @@
+
+/* Styling of the footer. Again these settings, max-width 100% and height auto should
+ allow responsiveness of the image as it moves to a smaller screensize, The image was much taller than the header but adding 
+ margins into the h3 style allowed it to sit alot better and show the fuller image off. Care styling the left margin for smaller screen sizes*/
+
+.footer {
+  background: url(Background/Footer2.jpg) no-repeat bottom;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  border: solid 3px black;
+  max-width: 100%;
+}
+/*
+.text {
+  padding: 50px;
+  width: 90%;
+  margin: 0 auto; 
+}
+  Center the DIV horizontally */
+
+h2 {
+  text-align:center;
+}
+
+h3 {
+  color: Black;
+  font: bold 20px;
+  margin: 200px 0px 10px 0px;
+}
+
+
+/*Styling for the  image gallery on this home page*/
+
+div.gallery {
+    border: 2px solid slateblue;
+    margin: 5px;
+
+  }
+  
+  div.gallery:hover {
+    border: 4px solid black;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    font-family: "Brushstroke TM" cursive;
+    font: bold 20px black;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+/*End of Styling for the image gallery on this home page*/
+
+
+
+
+/* Responsive Media Query to make each link 100%
+class .responsive restyles the photogallery */
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+  }
+ 
+  
+@media only screen and (max-width: 750px) {
+.responsive {
+    width: 50%;
+    margin: 6px 0;
+  }  
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }  
+
+/* Clears Floats to restart next row */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
